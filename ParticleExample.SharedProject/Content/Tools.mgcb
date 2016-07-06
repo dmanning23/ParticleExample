@@ -73,48 +73,6 @@
 /processorParam:TextureFormat=Color
 /build:WhiteStar.png
 
-#begin ArialBlack10.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:TextureFormat=Compressed
-/build:ArialBlack10.spritefont
-
-#begin ArialBlack14.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:TextureFormat=Compressed
-/build:ArialBlack14.spritefont
-
-#begin ArialBlack24.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:TextureFormat=Compressed
-/build:ArialBlack24.spritefont
-
-#begin ArialBlack36.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:TextureFormat=Compressed
-/build:ArialBlack36.spritefont
-
-#begin ArialBlack48.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:TextureFormat=Compressed
-/build:ArialBlack48.spritefont
-
-#begin ArialBlack72.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:TextureFormat=Compressed
-/build:ArialBlack72.spritefont
-
-#begin ArialBlack96.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:TextureFormat=Compressed
-/build:ArialBlack96.spritefont
-
 #begin MenuMove.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
@@ -126,4 +84,46 @@
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:MenuSelect.wav
+
+#begin Fonts/ArialBlack10.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack10.spritefont
+
+#begin Fonts/ArialBlack14.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack14.spritefont
+
+#begin Fonts/ArialBlack24.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack24.spritefont
+
+#begin Fonts/ArialBlack36.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack36.spritefont
+
+#begin Fonts/ArialBlack48.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack48.spritefont
+
+#begin Fonts/ArialBlack72.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack72.spritefont
+
+#begin Fonts/ArialBlack96.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack96.spritefont
 
