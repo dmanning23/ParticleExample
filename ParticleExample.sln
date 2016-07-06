@@ -15,7 +15,11 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ParticleExample.SharedProje
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ParticleExample.SharedProject\ParticleExample.SharedProject.projitems*{029cbec6-26ef-4b9e-9eb1-aeab554b0516}*SharedItemsImports = 4
+		ParticleExample.SharedProject\ParticleExample.SharedProject.projitems*{b0b9b2d1-5107-4ffa-a450-4c3d9df013bb}*SharedItemsImports = 4
+		ParticleExample.SharedProject\ParticleExample.SharedProject.projitems*{5cb02a5e-8ccd-4a74-89da-0170b69a27fb}*SharedItemsImports = 4
 		ParticleExample.SharedProject\ParticleExample.SharedProject.projitems*{752436c4-0a40-4090-89d0-5e99e665266c}*SharedItemsImports = 13
+		ParticleExample.SharedProject\ParticleExample.SharedProject.projitems*{b7c062c6-ecd1-4aaa-841c-3d9362fedf48}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
