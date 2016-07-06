@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="ParticleExample.WindowsUniversal.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ParticleExample.WindowsUniversal"
+    RequestedTheme="Light">
+
+</Application>
