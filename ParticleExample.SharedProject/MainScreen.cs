@@ -2,6 +2,9 @@ using FontBuddyLib;
 using MenuBuddy;
 using Microsoft.Xna.Framework;
 using ResolutionBuddy;
+using ParticleBuddy;
+using GameTimer;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace ParticleExample
 {
@@ -14,6 +17,25 @@ namespace ParticleExample
 	/// </summary>
 	public class MainScreen : WidgetScreen, IMainMenu
 	{
+		#region Properties
+
+		/// <summary>
+		/// The clock used to time this game
+		/// </summary>
+		private GameClock Clock { get; set; }
+
+		/// <summary>
+		/// The particle engine for this game
+		/// </summary>
+		private ParticleEngine ParticleEngine { get; set; }
+
+		/// <summary>
+		/// The particle effect to play whenever the user clicks on the screen
+		/// </summary>
+		private EmitterTemplate ClickEmitter { get; set; }
+
+		#endregion //Properties
+
 		#region Methods
 
 		/// <summary>
@@ -27,6 +49,22 @@ namespace ParticleExample
 		public override void LoadContent()
 		{
 			base.LoadContent();
+
+			//Create the particle engine
+			Clock = new GameClock();
+			ParticleEngine = new ParticleEngine();
+
+			//create the click emitter particle effect
+			ClickEmitter = new EmitterTemplate()
+			{
+				ParticleSize = 32,
+				MinSpin = -5f,
+				MaxSpin = 5f,
+				ParticleGravity = 500f,
+				MaxParticleVelocity = new Vector2(200f, -300f),
+				MinParticleVelocity = new Vector2(-200f, 100f),
+				Texture = ScreenManager.Game.Content.Load<Texture2D>("WhiteStar")
+			};
 
 			//add the studio tag
 			var dannobotText = new FontBuddy()
@@ -57,7 +95,8 @@ namespace ParticleExample
 			};
 			button.OnClick += ((onj, e) =>
 			{
-				//TODO: Create a particle effect
+				//Create a particle effect
+				ParticleEngine.PlayParticleEffect(ClickEmitter, Vector2.Zero, e.Position, Vector2.Zero, Color.White, false);
 			});
 			AddItem(button);
 
@@ -74,6 +113,24 @@ namespace ParticleExample
 				Position = Resolution.ScreenArea.Center,
 			};
 			AddItem(pulsate);
+		}
+
+		public override void Update(GameTime gameTime, bool otherScreenHasFocus, bool coveredByOtherScreen)
+		{
+			base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
+
+			Clock.Update(gameTime);
+			ParticleEngine.Update(Clock);
+		}
+
+		public override void Draw(GameTime gameTime)
+		{
+			base.Draw(gameTime);
+
+			//draw all the current particle effects
+			ScreenManager.SpriteBatchBegin();
+			ParticleEngine.Render(ScreenManager.SpriteBatch);
+			ScreenManager.SpriteBatchEnd();
 		}
 
 		#endregion //Methods
