@@ -38,8 +38,6 @@ namespace ParticleExample.Android
 			global::InputHelper.Android.Resource.String.Hello = global::ParticleExample.Android.Resource.String.Hello;
 			global::MatrixExtensions.Android.Resource.String.ApplicationName = global::ParticleExample.Android.Resource.String.ApplicationName;
 			global::MatrixExtensions.Android.Resource.String.Hello = global::ParticleExample.Android.Resource.String.Hello;
-			global::MenuBuddy.Android.Resource.String.ApplicationName = global::ParticleExample.Android.Resource.String.ApplicationName;
-			global::MenuBuddy.Android.Resource.String.Hello = global::ParticleExample.Android.Resource.String.Hello;
 			global::MouseBuddy.Android.Resource.String.ApplicationName = global::ParticleExample.Android.Resource.String.ApplicationName;
 			global::MouseBuddy.Android.Resource.String.Hello = global::ParticleExample.Android.Resource.String.Hello;
 			global::ParticleBuddy.Android.Resource.String.ApplicationName = global::ParticleExample.Android.Resource.String.ApplicationName;
