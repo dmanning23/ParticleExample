@@ -54,6 +54,18 @@ namespace ParticleExample
 			Clock = new GameClock();
 			ParticleEngine = new ParticleEngine();
 
+			ParticleEngine.PlayParticleEffect(new EmitterTemplate()
+			{
+				ParticleSize = 32,
+				MinSpin = -5f,
+				MaxSpin = 5f,
+				ParticleGravity = 500f,
+				MaxParticleVelocity = new Vector2(200f, -300f),
+				MinParticleVelocity = new Vector2(-200f, 100f),
+				Texture = ScreenManager.Game.Content.Load<Texture2D>("WhiteStar"),
+				Expires = false,
+			}, Vector2.Zero, Vector2.Zero, Vector2.Zero, Color.Red, false);
+
 			//create the click emitter particle effect
 			ClickEmitter = new EmitterTemplate()
 			{
@@ -76,7 +88,7 @@ namespace ParticleExample
 				Font = dannobotText,
 				ShadowColor = new Color(0.15f, 0.15f, 0.15f),
 				TextColor = new Color(0.85f, 0.85f, 0.85f, 0.7f),
-				Transition = new WipeTransitionObject(TransitionWipeType.PopRight),
+				TransitionObject = new WipeTransitionObject(TransitionWipeType.PopRight),
 				Horizontal = HorizontalAlignment.Right,
 				Vertical = VerticalAlignment.Bottom,
 				Position = new Point(Resolution.TitleSafeArea.Right, Resolution.TitleSafeArea.Bottom),
@@ -91,7 +103,7 @@ namespace ParticleExample
 				Size = new Vector2(Resolution.ScreenArea.Width, Resolution.ScreenArea.Height),
 				Horizontal = HorizontalAlignment.Left,
 				Vertical = VerticalAlignment.Top,
-				Transition = new WipeTransitionObject(TransitionWipeType.SlideLeft)
+				TransitionObject = new WipeTransitionObject(TransitionWipeType.SlideLeft)
 			};
 			button.OnClick += ((onj, e) =>
 			{
